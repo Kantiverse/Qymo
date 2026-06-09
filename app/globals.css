@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  /* Warm SaaSPlate-inspired palette */
+  --cream: #fdf6ec;
+  --cream-deep: #faedda;
+  --peach: #f8e1c4;
+  --ink: #2b2b2b;
+  --ink-soft: #5c5751;
+  --orange: #f5862e; /* logo / accent orange */
+  --tomato: #f15a36; /* primary button */
+  --tomato-dark: #df4a28;
+  --teal: #2bb6a3;
+  --background: #fdf6ec;
+  --foreground: #2b2b2b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-peach: var(--peach);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-orange: var(--orange);
+  --color-tomato: var(--tomato);
+  --color-tomato-dark: var(--tomato-dark);
+  --color-teal: var(--teal);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+/* gentle float for doodles / mockups */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-floaty { animation: floaty 6s ease-in-out infinite; }
+
+@keyframes floaty-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-floaty-slow { animation: floaty-slow 8s ease-in-out infinite; }
