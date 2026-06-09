@@ -256,6 +256,39 @@ function HajaMockup() {
 
 const navLinks = ["Solutions", "Work", "About", "Process"];
 
+const faqs: { q: string; a: string }[] = [
+  {
+    q: "What is Qymo?",
+    a: "Qymo is a Nigerian product studio that designs, builds and ships software. Rather than just advising, Qymo takes ideas from concept to a working, live product — and is the studio behind Haja, a marketplace for local stores, services and used deals.",
+  },
+  {
+    q: "What does Qymo build?",
+    a: "Qymo builds web and marketplace platforms, mobile apps, product and UX design, payments and third-party integrations, and the backend and infrastructure needed to scale. It covers the whole product, from first sketch to launch.",
+  },
+  {
+    q: "What is Haja?",
+    a: "Haja is Qymo's flagship product: a Nigerian marketplace where people buy from local stores, find services, and discover nearby used deals. It is built and run by Qymo and is live at haja.shop.",
+  },
+  {
+    q: "Where is Qymo based?",
+    a: "Qymo is based in Nigeria and builds products for the African market and beyond.",
+  },
+  {
+    q: "How do I work with Qymo?",
+    a: "Email hello@qymo.ng with a short description of what you want to build. Qymo will reply with a clear path to a real, working product.",
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function Home() {
   return (
     <main className="relative w-full overflow-x-hidden bg-cream text-ink">
@@ -579,6 +612,44 @@ export default function Home() {
           <span className="hidden text-sm text-ink-soft sm:inline">
             — the studio behind Haja
           </span>
+        </div>
+      </section>
+
+      {/* ---------------- FAQ ---------------- */}
+      <section id="faq" className="relative mx-auto max-w-3xl px-5 py-20">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+        <div className="text-center">
+          <div className="flex justify-center">
+            <SectionTag>FAQ</SectionTag>
+          </div>
+          <h2 className="font-display mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
+            Questions, answered
+          </h2>
+        </div>
+        <div className="mt-12 divide-y divide-black/10 border-y border-black/10">
+          {faqs.map((f) => (
+            <details key={f.q} className="group py-5">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+                <h3 className="font-display text-lg font-semibold text-ink">
+                  {f.q}
+                </h3>
+                <span className="shrink-0 text-tomato transition group-open:rotate-45">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none">
+                    <path
+                      d="M12 5v14M5 12h14"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+              </summary>
+              <p className="mt-3 max-w-2xl text-ink-soft">{f.a}</p>
+            </details>
+          ))}
         </div>
       </section>
 

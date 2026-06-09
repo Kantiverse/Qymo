@@ -1,0 +1,38 @@
+# Qymo
+
+> Qymo is a Nigerian product studio that designs, builds and ships software solutions. Qymo is the studio behind Haja, a marketplace for local stores, services and nearby used deals.
+
+## About
+
+Qymo is a solutions studio (product studio) based in Nigeria. Instead of only advising, Qymo takes ideas from concept to a working, launched product. Its flagship product is Haja (https://haja.shop), a live Nigerian marketplace built and operated by Qymo.
+
+Contact: hello@qymo.ng
+Website: https://qymo.ng
+
+## What Qymo builds
+
+- Web and marketplace platforms (multi-vendor storefronts, dashboards)
+- Mobile apps
+- Product and UX design, design systems
+- Payments and third-party integrations (payments, maps, logistics)
+- Backend, APIs and infrastructure built to scale
+- Launch and iteration
+
+## Flagship product: Haja
+
+- URL: https://haja.shop
+- What it is: a Nigerian marketplace where people buy from local stores, find services, and discover nearby used deals.
+- Built and run by Qymo.
+
+## Key facts
+
+- Name: Qymo
+- Type: product / solutions studio
+- Country: Nigeria
+- Flagship product: Haja (haja.shop)
+- Contact: hello@qymo.ng
+
+## Links
+
+- Homepage: https://qymo.ng
+- Haja (flagship product): https://haja.shop
