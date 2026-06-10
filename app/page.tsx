@@ -701,6 +701,9 @@ export default function Home() {
               Contact
             </a>
           </div>
+          <p className="text-center text-sm text-ink-soft sm:text-right">
+            009 Garuje, Tukur-Tukur, Zaria, Kaduna
+          </p>
           <p className="text-sm text-ink-soft">© {new Date().getFullYear()} Qymo. Built to ship.</p>
         </div>
       </footer>
